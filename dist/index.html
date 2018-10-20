@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    div.boards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 0 auto;
+      width: 90%;
+    }
+    div.grid {
+      margin: 20px 0px;
+    }
+    div.row {
+      display: flex;
+    }
+    div.row:not(:last-child):nth-child(3n) {
+      border-bottom: 1px solid black;
+      width: max-content;
+    }
+    div.cell {
+      align-items: center;
+      border: 1px solid #ddd;
+      box-sizing: border-box;
+      display: flex;
+      flex-wrap: wrap;
+      height: 30px;
+      justify-content: center;
+      width: 30px;
+    }
+    div.cell:not(:first-child):nth-child(3n + 1) {
+      border-left: 1px solid black;
+    }
+    div.cell > div.dg {
+      box-sizing: border-box;
+      display: flex;
+      font-size: 6px;
+      width: 33.33%;
+      align-items: flex-start;
+      justify-content: flex-end;
+    }
+    div.cell > div.dg:nth-child(n + 4) {
+      align-items: center;
+    }
+    div.cell > div.dg:nth-child(n + 7) {
+      align-items: flex-end;
+    }
+    div.cell > div.dg:nth-child(3n - 1) {
+      justify-content: center;
+    }
+    div.cell > div.dg:nth-child(3n - 2) {
+      justify-content: flex-start;
+    }
+  </style>
+</head>
+  <body>
+
+    <div class="wrapper">
+      <h1>It works!</h1>
+    </div>
+
+    <div class="boards">
+    </div>
+
+    <script src="js/app.bundle.js"></script>
+  </body>
+</html>
